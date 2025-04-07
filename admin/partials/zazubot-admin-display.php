@@ -1,5 +1,5 @@
 <div style="padding: 1rem; max-width: 700px">
-  <h1 style="margin-bottom: 2rem;">ZazuBot Settings</h1>
+  <h1 style="margin-bottom: 2rem;">Zazubot Settings</h1>
   <ol style="margin-top: 1rem; margin-left: 1rem; font-size: 16px; display: flex; flex-direction: column;gap: 1rem">
     <li>Generate your initialization snippet in the Share tab of your zazubot.</li>
     <li>If embedding as <strong>Standard</strong> container, paste the generated shortcode anywhere on your site.</li>

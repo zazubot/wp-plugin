@@ -3,13 +3,13 @@ if (!defined('ABSPATH')) {
   exit();
 }
 
-class ZazuBot_Admin
+class Zazubot_Admin
 {
   public function my_admin_menu()
   {
     add_menu_page(
-      'ZazuBot Settings',
-      'ZazuBot',
+      'Zazubot Settings',
+      'Zazubot',
       'manage_options',
       'zazubot/settings.php',
       [$this, 'zazubot_settings_callback'],

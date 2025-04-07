@@ -1,6 +1,6 @@
 <?php
 
-class ZazuBot_Activator
+class Zazubot_Activator
 {
 	public static function activate()
 	{

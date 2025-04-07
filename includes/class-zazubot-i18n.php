@@ -1,6 +1,6 @@
 <?php
 
-class ZazuBot_i18n
+class Zazubot_i18n
 {
 	public function load_plugin_textdomain()
 	{

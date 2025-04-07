@@ -1,6 +1,6 @@
 <?php
 
-class ZazuBot
+class Zazubot
 {
 
 	protected $loader;
@@ -30,25 +30,25 @@ class ZazuBot
 		require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class-zazubot-admin.php';
 		require_once plugin_dir_path(dirname(__FILE__)) . 'public/class-zazubot-public.php';
 
-		$this->loader = new ZazuBot_Loader();
+		$this->loader = new Zazubot_Loader();
 	}
 
 	private function set_locale()
 	{
-		$plugin_i18n = new ZazuBot_i18n();
+		$plugin_i18n = new Zazubot_i18n();
 		$this->loader->add_action('plugins_loaded', $plugin_i18n, 'load_plugin_textdomain');
 	}
 
 	private function define_admin_hooks()
 	{
-		$plugin_admin = new ZazuBot_Admin($this->get_version());
+		$plugin_admin = new Zazubot_Admin($this->get_version());
 		$this->loader->add_action('admin_menu', $plugin_admin, 'my_admin_menu');
 		$this->loader->add_action('admin_init', $plugin_admin, 'register_zazubot_settings');
 	}
 
 	private function define_public_hooks()
 	{
-		$plugin_public = new ZazuBot_Public($this->get_plugin_name(), $this->get_version());
+		$plugin_public = new Zazubot_Public($this->get_plugin_name(), $this->get_version());
 		$this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'add_head_code');
 		$this->loader->add_shortcode('zazubot', $plugin_public, 'add_zazubot_container');
 	}

@@ -1,6 +1,6 @@
 <?php
 
-class ZazuBot_Deactivator
+class Zazubot_Deactivator
 {
 	public static function deactivate()
 	{

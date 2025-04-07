@@ -1,6 +1,6 @@
 <?php
 
-class ZazuBot_Loader
+class Zazubot_Loader
 {
 	protected $actions;
 	protected $filters;

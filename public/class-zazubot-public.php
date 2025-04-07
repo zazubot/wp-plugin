@@ -2,7 +2,7 @@
 
 define('ZAZUBOT_DEFAULT_LIB_VERSION', '0.3');
 
-class ZazuBot_Public
+class Zazubot_Public
 {
   public function __construct()
   {
@@ -46,9 +46,9 @@ class ZazuBot_Public
     if (empty(get_option('init_snippet')) || $this->is_path_excluded(get_option('excluded_pages'))) return;
     $lib_version = ($version = get_option('lib_version')) ? $version : ZAZUBOT_DEFAULT_LIB_VERSION;
     echo '<script type="module">
-    import ZazuBot from "https://cdn.jsdelivr.net/npm/@zazubot.com/js@'.$lib_version.'/dist/web.js";'.
+    import Typebot from "https://cdn.jsdelivr.net/npm/@typebot.io/js@'.$lib_version.'/dist/web.js";'.
       get_option('init_snippet').
-      'ZazuBot.setPrefilledVariables({ ...typebotWpUser });
+      'Typebot.setPrefilledVariables({ ...typebotWpUser });
     </script>';
   }
 
@@ -119,10 +119,10 @@ class ZazuBot_Public
           $lib_version = sanitize_text_field($lib_version);
       }
     }
-    $lib_url = esc_url_raw("https://cdn.jsdelivr.net/npm/@zazubot.com/js@". $lib_version ."/dist/web.js");
+    $lib_url = esc_url_raw("https://cdn.jsdelivr.net/npm/@typebot.io/js@". $lib_version ."/dist/web.js");
     $width = '100%';
     $height = '500px';
-    $api_host = 'https://zazubot.co';
+    $api_host = 'https://zazubot.com';
     $ws_host = 'partykit.zazubot.com';
     if (array_key_exists('width', $attributes)) {
       $width = $attributes['width'];
@@ -152,7 +152,7 @@ class ZazuBot_Public
       $api_host = $attributes['host'];
       // Limit the length and sanitize
       if (strlen($api_host) > 100 || !filter_var($api_host, FILTER_VALIDATE_URL)) {
-        $api_host = 'https://zazubot.co'; // fallback to default host
+        $api_host = 'https://zazubot.com'; // fallback to default host
       } else {
         $api_host = sanitize_text_field($api_host);
       }
@@ -173,11 +173,11 @@ class ZazuBot_Public
     $id = $this->generateRandomString();
 
     $bot_initializer = '<script type="module">
-    import ZazuBot from "' . esc_url($lib_url) . '"
+    import Typebot from "' . esc_url($lib_url) . '"
     const urlParams = new URLSearchParams(window.location.search);
     const queryParams = Object.fromEntries(urlParams.entries());
-    ZazuBot.initStandard({ apiHost: "' . esc_js($api_host) . '", wsHost: "' . esc_js($ws_host) . '", id: "' . esc_js($id) . '", zazubot: "' . esc_js($zazubot) . '", prefilledVariables: { ...window.typebotWpUser, ...queryParams } });</script>';
-    return  '<zazubot-standard id="' . esc_attr($id) . '" style="width: ' . esc_attr($width) . '; height: ' . esc_attr($height) . ';"></zazubot-standard>' . $bot_initializer;
+    Typebot.initStandard({ apiHost: "' . esc_js($api_host) . '", wsHost: "' . esc_js($ws_host) . '", id: "' . esc_js($id) . '", typebot: "' . esc_js($zazubot) . '", prefilledVariables: { ...window.typebotWpUser, ...queryParams } });</script>';
+    return  '<typebot-standard id="' . esc_attr($id) . '" style="width: ' . esc_attr($width) . '; height: ' . esc_attr($height) . ';"></typebot-standard>' . $bot_initializer;
   }
 
   private function generateRandomString($length = 10)

@@ -1,8 +1,8 @@
-=== ZazuBot ===
+=== zazubot ===
 Contributors: ahmedkhaled4d
-Tags: chatbot, ai chat, customer support, chatbot builder
+Tags: Agents, ai chat, customer support, chatbot builder
 Requires at least: 5.0
-Tested up to: 6.7.1
+Tested up to: 6.7
 License: GPL 2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 Stable Tag: 4.2.0
@@ -11,20 +11,21 @@ Stable Tag: 4.2.0
 Create advanced chat experiences without coding
 
 == Description ==
-Collect 4x more responses with conversational apps using ZazuBot.
+Together, we're hacking the future of conversational AI apps
+
 
 👉 Build beautiful conversational apps and easily embed them in your Wordpress site.
-👉 ZazuBot helps you publish chat apps that feel native to your product and it provides the best experience for your users.
-👉 With ZazuBot, you collect the answer as soon as the user answers the first question. You get to know exactly when the user tends to drop your form.
+👉 zazubot helps you publish chat apps that feel native to your product and it provides the best experience for your users.
+👉 With zazubot, you collect the answer as soon as the user answers the first question. You get to know exactly when the user tends to drop your form.
 
-This plugin relies on ZazuBot which is a tool that allows you to create conversational forms and directly integrate them on your Wordpress site.
-💁‍♂️ More information about ZazuBot: https://www.zazubot.com/
-👨🏼‍💻 How ZazuBot handles collected data: https://www.zazubot.com/privacy-policy
+This plugin relies on zazubot which is a tool that allows you to create conversational forms and directly integrate them on your Wordpress site.
+💁‍♂️ More information about zazubot: https://zazubot.com/
+👨🏼‍💻 How zazubot handles collected data: https://zazubot.com/privacy-policy
 
 == Installation ==
 1. Add the plugin folder to the /wp-content/plugins/ directory
 2. Activate the plugin through the ‘Plugins’ menu in WordPress
-3. Activate your ZazuBot with the "ZazuBot" admin button located in the sidebar
+3. Activate your zazubot with the "zazubot" admin button located in the sidebar
 
 == Changelog ==
 = 4.2.0 =
@@ -114,7 +115,7 @@ This plugin relies on ZazuBot which is a tool that allows you to create conversa
 * Fix auto open bubble even if empty param
 
 = 2.1.4 =
-* Fix bug when ZazuBot URL is empty
+* Fix bug when zazubot URL is empty
 
 = 2.1.2 =
 * Fix shortcode default bot URL
@@ -123,7 +124,7 @@ This plugin relies on ZazuBot which is a tool that allows you to create conversa
 * Added auto open delay for bubble embed
 
 = 2.0.0 =
-* Support for ZazuBot 2.0
+* Support for zazubot 2.0
 
 = 1.4.8 =
 * Fix shortcodes
@@ -168,7 +169,7 @@ This plugin relies on ZazuBot which is a tool that allows you to create conversa
 * Can set publish or full URL (for custom domains).
 
 = 1.2.0 =
-* Add advanced setup where you can paste the code from ZazuBot.
+* Add advanced setup where you can paste the code from zazubot.
 
 = 1.1.2 =
 * Bug fixes
